@@ -1,9 +1,6 @@
 package com.codegym.model;
 
-import java.io.Serializable;
-
-public class Phonebook {
-    private int id;
+public class Contact {
     private String name;
     private String phonenumber;
     private String address;
@@ -11,24 +8,15 @@ public class Phonebook {
     private String facebook;
 
 
-    public Phonebook() {
+    public Contact() {
     }
 
-    public Phonebook(int id, String name, String phonenumber, String address, String email, String facebook) {
-        this.id = id;
+    public Contact(String name, String phonenumber, String address, String email, String facebook) {
         this.name = name;
         this.phonenumber = phonenumber;
         this.address = address;
         this.email = email;
         this.facebook = facebook;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -73,8 +61,7 @@ public class Phonebook {
 
     @Override
     public String toString() {
-        return "Phonebook{" +
-                "id=" + id +
+        return "Contact"+
                 ", name='" + name + '\'' +
                 ", phonenumber=" + phonenumber +
                 ", address='" + address + '\'' +
